@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Rabisco — Fase 1: do texto à AST</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 860px; margin: 30px auto; padding: 0 12px; }
+    textarea { width: 100%; height: 220px; font-family: monospace; font-size: 15px; box-sizing: border-box; }
+    button, select { margin: 10px 6px 10px 0; padding: 8px 14px; font-size: 15px; }
+    table { border-collapse: collapse; font-family: monospace; font-size: 14px; }
+    th, td { border: 1px solid #ccc; padding: 3px 10px; text-align: left; }
+    th { background: #f0f0f0; }
+    pre { border: 1px solid #ccc; padding: 10px; min-height: 40px; margin: 0;
+          white-space: pre-wrap; font-family: monospace; font-size: 14px; }
+    .ok   { color: #0a6b2b; font-weight: bold; }
+    .erro { color: #b00020; font-weight: bold; }
+    #tokens { max-height: 320px; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Rabisco — analisador léxico e sintático</h1>
+
+  <textarea id="entrada" spellcheck="false"></textarea>
+  <br>
+  <button id="botao">Analisar</button>
+  <select id="exemplos"><option value="">— carregar um caso de teste —</option></select>
+
+  <h3>Tokens</h3>
+  <div id="tokens"></div>
+
+  <h3>Resultado</h3>
+  <div id="status"></div>
+  <pre id="saida"></pre>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
